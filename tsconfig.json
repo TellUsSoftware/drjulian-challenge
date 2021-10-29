@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2020",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "node_modules/*",
+        "src/types/*"
+      ]
+    },
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "alwaysStrict": true,
+    "strictBindCallApply": true,
+    "strictNullChecks": false,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": false
+  },
+  "files": [
+    "src/server.ts"
+  ],
+  "include": [
+    "src/types/*.d.ts",
+    "src/middlewares/*.ts",
+    "src/migrations/*.ts",
+    "src/config/environments/*.ts"
+  ],
+  "exclude": [
+    "test/*",
+    "src/**/*.test.ts",
+    "src/**/*.spec.ts"
+  ]
+}
