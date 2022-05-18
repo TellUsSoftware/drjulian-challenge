@@ -13,6 +13,15 @@ import errorhandler from 'errorhandler';
 const app = express();
 app.set('showStackError', true);
 
+//headers
+
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization, username');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
+  next();
+});
+
 // should be placed before express.static
 app.use(compression({
   filter: function (req: Request, res: Response) {
